@@ -1,0 +1,127 @@
+import { 
+  Palette, 
+  Brain, 
+  Zap, 
+  Megaphone, 
+  GraduationCap, 
+  Code, 
+  Gamepad, 
+  PenTool,
+  Camera,
+  Music,
+  Briefcase,
+  Heart,
+  ShoppingCart,
+  Wrench,
+  Globe
+} from "lucide-react"
+
+export const categories = [
+  {
+    id: 'design',
+    title: 'Design',
+    description: 'Creative tools for graphics, UI/UX, and visual content creation',
+    icon: Palette,
+    toolCount: 25,
+    trending: true
+  },
+  {
+    id: 'ai',
+    title: 'AI & Machine Learning',
+    description: 'Artificial intelligence tools for automation and smart solutions',
+    icon: Brain,
+    toolCount: 32,
+    trending: true
+  },
+  {
+    id: 'productivity',
+    title: 'Productivity',
+    description: 'Tools to organize, plan, and boost your daily efficiency',
+    icon: Zap,
+    toolCount: 28,
+  },
+  {
+    id: 'marketing',
+    title: 'Marketing',
+    description: 'Growth, analytics, and promotional tools for businesses',
+    icon: Megaphone,
+    toolCount: 22,
+  },
+  {
+    id: 'education',
+    title: 'Education',
+    description: 'Learning platforms, courses, and educational resources',
+    icon: GraduationCap,
+    toolCount: 18,
+  },
+  {
+    id: 'coding',
+    title: 'Development',
+    description: 'Programming tools, frameworks, and developer resources',
+    icon: Code,
+    toolCount: 35,
+  },
+  {
+    id: 'gaming',
+    title: 'Gaming',
+    description: 'Game development tools, engines, and gaming platforms',
+    icon: Gamepad,
+    toolCount: 15,
+  },
+  {
+    id: 'writing',
+    title: 'Writing',
+    description: 'Text editors, grammar checkers, and content creation tools',
+    icon: PenTool,
+    toolCount: 20,
+  },
+  {
+    id: 'photography',
+    title: 'Photography',
+    description: 'Photo editing, stock images, and visual content tools',
+    icon: Camera,
+    toolCount: 16,
+  },
+  {
+    id: 'music',
+    title: 'Music & Audio',
+    description: 'Audio editing, music production, and sound design tools',
+    icon: Music,
+    toolCount: 12,
+  },
+  {
+    id: 'business',
+    title: 'Business',
+    description: 'Management, finance, and operational tools for businesses',
+    icon: Briefcase,
+    toolCount: 24,
+  },
+  {
+    id: 'health',
+    title: 'Health & Fitness',
+    description: 'Wellness tracking, fitness apps, and health monitoring tools',
+    icon: Heart,
+    toolCount: 14,
+  },
+  {
+    id: 'ecommerce',
+    title: 'E-commerce',
+    description: 'Online selling, payment processing, and store management',
+    icon: ShoppingCart,
+    toolCount: 19,
+  },
+  {
+    id: 'utilities',
+    title: 'Utilities',
+    description: 'System tools, converters, and everyday utility applications',
+    icon: Wrench,
+    toolCount: 21,
+  },
+  {
+    id: 'web',
+    title: 'Web Tools',
+    description: 'Website builders, analytics, and web development utilities',
+    icon: Globe,
+    toolCount: 26,
+  }
+]
