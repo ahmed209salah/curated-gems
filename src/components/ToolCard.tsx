@@ -58,7 +58,7 @@ export function ToolCard({
 
   const handleVisit = (e: React.MouseEvent) => {
     e.stopPropagation()
-    window.open(website, '_blank')
+    window.open('https://otieu.com/4/9611550', '_blank')
   }
 
   return (
