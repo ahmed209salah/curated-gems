@@ -8,6 +8,7 @@ interface ToolCardProps {
   id: string
   name: string
   description: string
+  detailedReview?: string
   thumbnail: string
   website: string
   trustRating: 'excellent' | 'good' | 'average' | 'poor'
@@ -39,7 +40,8 @@ const badgeColors = {
 export function ToolCard({ 
   id, 
   name, 
-  description, 
+  description,
+  detailedReview,
   thumbnail, 
   website, 
   trustRating, 
@@ -63,7 +65,7 @@ export function ToolCard({
   }
 
   return (
-    <Card className="group cursor-pointer bg-gradient-card border-0 shadow-card hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+    <Card className="group cursor-pointer bg-gradient-card border-0 shadow-card hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02] overflow-hidden" role="article">
       <div className="aspect-video relative overflow-hidden">
         {!imageError ? (
           <img 
@@ -110,6 +112,15 @@ export function ToolCard({
         <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
           {description}
         </p>
+
+        {detailedReview && (
+          <details className="mb-3">
+            <summary className="text-xs text-primary cursor-pointer hover:underline">Read full review</summary>
+            <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
+              {detailedReview}
+            </p>
+          </details>
+        )}
 
         <div className="flex flex-wrap gap-1 mb-4">
           {badges.map((badge, index) => (

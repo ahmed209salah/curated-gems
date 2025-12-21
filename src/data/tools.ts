@@ -2,6 +2,7 @@ export interface Tool {
   id: string
   name: string
   description: string
+  detailedReview?: string
   thumbnail: string
   website: string
   trustRating: 'excellent' | 'good' | 'average' | 'poor'
@@ -13,6 +14,7 @@ export interface Tool {
   category: string
   tags: string[]
   featured?: boolean
+  bestFor?: 'beginners' | 'pros' | 'teams' | 'freelancers' | 'students'
 }
 
 export const sampleTools: Tool[] = [
@@ -21,6 +23,7 @@ export const sampleTools: Tool[] = [
     id: 'd1',
     name: 'Figma',
     description: 'Collaborative interface design tool with real-time editing and prototyping',
+    detailedReview: 'Figma revolutionized UI/UX design by introducing browser-based collaboration that rivals desktop apps. Teams can work simultaneously on the same file, leave comments, and create interactive prototypes without switching tools. The free tier is generous for individuals and small teams, making it accessible for startups and freelancers. Advanced features like auto-layout, components, and design systems make scaling projects effortless.',
     thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop',
     website: 'https://figma.com',
     trustRating: 'excellent',
@@ -31,12 +34,14 @@ export const sampleTools: Tool[] = [
     ],
     category: 'design',
     tags: ['ui', 'design', 'collaboration', 'prototyping'],
-    featured: true
+    featured: true,
+    bestFor: 'teams'
   },
   {
     id: 'd2',
     name: 'Canva',
     description: 'Easy drag-and-drop design tool for social media, presentations, and marketing',
+    detailedReview: 'Canva democratized graphic design by making professional templates accessible to everyone. With thousands of pre-made designs for social media, presentations, and print materials, even complete beginners can create stunning visuals in minutes. The mobile app lets you design on-the-go, and the brand kit feature keeps your colors and fonts consistent. Perfect for marketers, educators, and small business owners who need quick, polished graphics without hiring a designer.',
     thumbnail: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop',
     website: 'https://canva.com',
     trustRating: 'excellent',
@@ -47,7 +52,8 @@ export const sampleTools: Tool[] = [
     ],
     category: 'design',
     tags: ['graphics', 'templates', 'social-media', 'marketing'],
-    featured: true
+    featured: true,
+    bestFor: 'beginners'
   },
   {
     id: 'd3',
@@ -318,6 +324,7 @@ export const sampleTools: Tool[] = [
     id: 'ai1',
     name: 'ChatGPT',
     description: 'Advanced AI chatbot for writing, coding, analysis, and creative assistance',
+    detailedReview: 'ChatGPT transformed how we interact with AI, offering conversational intelligence that helps with everything from drafting emails to debugging code. The free tier provides access to GPT-3.5, while Plus subscribers unlock GPT-4 with enhanced reasoning capabilities. Its strength lies in natural language understanding and context retention across long conversations. Ideal for writers seeking feedback, developers needing code explanations, and professionals automating repetitive tasks.',
     thumbnail: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop',
     website: 'https://chat.openai.com',
     trustRating: 'excellent',
@@ -328,7 +335,8 @@ export const sampleTools: Tool[] = [
     ],
     category: 'ai',
     tags: ['ai', 'chatbot', 'writing', 'coding'],
-    featured: true
+    featured: true,
+    bestFor: 'pros'
   },
   {
     id: 'ai2',
@@ -1800,6 +1808,25 @@ export const sampleTools: Tool[] = [
     ],
     category: 'coding',
     tags: ['api', 'documentation', 'rest', 'design']
+  },
+  // Utility Tools
+  {
+    id: 'util1',
+    name: 'Free High-Res QR Code Generator',
+    description: 'Create professional, high-resolution QR codes instantly for websites, text, WiFi, and more',
+    detailedReview: 'This free QR code generator stands out with its ability to create crisp, high-resolution codes perfect for print materials and large displays. Unlike many free alternatives that limit resolution or add watermarks, this tool delivers clean vector outputs suitable for professional use. Generate codes for URLs, plain text, WiFi credentials, and contact cards. The simple interface makes it ideal for small businesses, event organizers, and marketers who need reliable QR codes without complex software.',
+    thumbnail: 'https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=400&h=300&fit=crop',
+    website: 'https://qrcodegernertor.netlify.app',
+    trustRating: 'excellent',
+    rating: 4.5,
+    badges: [
+      { text: '💎 Forever Free', type: 'lifetime-free' },
+      { text: '💎 Hidden Gem', type: 'hidden-gem' }
+    ],
+    category: 'productivity',
+    tags: ['qr-code', 'generator', 'utility', 'free'],
+    featured: true,
+    bestFor: 'freelancers'
   }
 ]
 
