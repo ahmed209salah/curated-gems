@@ -2,11 +2,12 @@ import { useState } from "react"
 import { Hero } from "@/components/Hero"
 import { CategoryCard } from "@/components/CategoryCard"
 import { ToolCard } from "@/components/ToolCard"
+import { ToolComparisonTable } from "@/components/ToolComparisonTable"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { categories } from "@/data/categories"
 import { sampleTools, searchTools, getFeaturedTools, getToolsByCategory } from "@/data/tools"
-import { Sparkles, TrendingUp, BookmarkIcon, Filter } from "lucide-react"
+import { Sparkles, TrendingUp, BookmarkIcon } from "lucide-react"
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -58,13 +59,13 @@ const Index = () => {
         {!selectedCategory && !searchQuery && (
           <>
             {/* Categories Section */}
-            <section className="mb-16">
+            <section className="mb-16" aria-labelledby="categories-heading">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Explore by <span className="text-primary">Category</span>
-                </h2>
+                <h1 id="categories-heading" className="text-3xl md:text-4xl font-bold mb-4">
+                  Discover the Best Free Tools in Every <span className="text-primary">Category</span>
+                </h1>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Choose a category to discover the most trusted and popular tools in that space
+                  Choose a category to discover the most trusted and popular tools in that space. Hand-picked and reviewed by experts.
                 </p>
               </div>
 
@@ -97,15 +98,15 @@ const Index = () => {
             </section>
 
             {/* Featured Tools Section */}
-            <section className="mb-16">
+            <section className="mb-16" aria-labelledby="featured-heading">
               <div className="flex items-center justify-between mb-8">
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-2 flex items-center">
+                  <h2 id="featured-heading" className="text-2xl md:text-3xl font-bold mb-2 flex items-center">
                     <Sparkles className="h-6 w-6 text-primary mr-2" />
                     Featured Tools
                   </h2>
                   <p className="text-muted-foreground">
-                    Hand-picked favorites that stand out from the crowd
+                    Hand-picked favorites that stand out from the crowd, reviewed by experts
                   </p>
                 </div>
                 <Badge className="bg-gradient-primary text-primary-foreground">
@@ -113,6 +114,9 @@ const Index = () => {
                   Popular
                 </Badge>
               </div>
+
+              {/* Comparison Table for Featured Tools */}
+              <ToolComparisonTable tools={displayedTools} categoryTitle="Featured" />
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {displayedTools.map((tool) => (
@@ -130,7 +134,7 @@ const Index = () => {
 
         {/* Category View */}
         {selectedCategory && !searchQuery && (
-          <section>
+          <section aria-labelledby="category-heading">
             <div className="flex items-center justify-between mb-8">
               <div>
                 <Button
@@ -140,7 +144,7 @@ const Index = () => {
                 >
                   ← Back to Categories
                 </Button>
-                <h1 className="text-3xl md:text-4xl font-bold mb-2">
+                <h1 id="category-heading" className="text-3xl md:text-4xl font-bold mb-2">
                   {selectedCategoryData?.title} Tools
                 </h1>
                 <p className="text-lg text-muted-foreground">
@@ -151,6 +155,14 @@ const Index = () => {
                 {displayedTools.length} tools
               </Badge>
             </div>
+
+            {/* Comparison Table for SEO */}
+            {displayedTools.length >= 3 && (
+              <ToolComparisonTable 
+                tools={displayedTools} 
+                categoryTitle={selectedCategoryData?.title || 'Top'} 
+              />
+            )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {displayedTools.map((tool) => (
@@ -165,7 +177,7 @@ const Index = () => {
 
             {displayedTools.length === 0 && (
               <div className="text-center py-16">
-                <h3 className="text-xl font-semibold mb-2">No tools found</h3>
+                <h2 className="text-xl font-semibold mb-2">No tools found</h2>
                 <p className="text-muted-foreground">
                   We're still curating tools for this category. Check back soon!
                 </p>
@@ -176,7 +188,7 @@ const Index = () => {
 
         {/* Search Results */}
         {searchQuery && (
-          <section>
+          <section aria-labelledby="search-heading">
             <div className="flex items-center justify-between mb-8">
               <div>
                 <Button
@@ -186,7 +198,7 @@ const Index = () => {
                 >
                   ← Clear Search
                 </Button>
-                <h1 className="text-3xl md:text-4xl font-bold mb-2">
+                <h1 id="search-heading" className="text-3xl md:text-4xl font-bold mb-2">
                   Search Results for "{searchQuery}"
                 </h1>
                 <p className="text-lg text-muted-foreground">
@@ -208,7 +220,7 @@ const Index = () => {
 
             {displayedTools.length === 0 && (
               <div className="text-center py-16">
-                <h3 className="text-xl font-semibold mb-2">No tools found</h3>
+                <h2 className="text-xl font-semibold mb-2">No tools found</h2>
                 <p className="text-muted-foreground">
                   Try searching for something else or browse our categories
                 </p>
@@ -219,8 +231,8 @@ const Index = () => {
 
         {/* Bookmarks Section */}
         {bookmarkedTools.length > 0 && !searchQuery && !selectedCategory && (
-          <section className="mt-16 pt-16 border-t border-border">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center">
+          <section className="mt-16 pt-16 border-t border-border" aria-labelledby="bookmarks-heading">
+            <h2 id="bookmarks-heading" className="text-2xl md:text-3xl font-bold mb-8 flex items-center">
               <BookmarkIcon className="h-6 w-6 text-primary mr-2" />
               Your Bookmarks ({bookmarkedTools.length})
             </h2>
@@ -243,15 +255,15 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-muted/30 py-12 mt-16">
+      <footer className="bg-muted/30 py-12 mt-16" role="contentinfo">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4 flex items-center justify-center">
+          <p className="text-2xl font-bold mb-4 flex items-center justify-center">
             <Sparkles className="h-6 w-6 text-primary mr-2" />
             Curated Gems
-          </h3>
+          </p>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Helping creators, entrepreneurs, and makers discover the best free tools to bring their ideas to life. 
-            New gems added weekly.
+            New gems added weekly. Each tool is hand-reviewed with detailed analysis to help you make informed decisions.
           </p>
           <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
             <span>1,000+ Tools</span>
