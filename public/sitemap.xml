@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://curatedgems.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Design Tools -->
+  <url><loc>https://curatedgems.com/tool/d1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d2</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d4</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d5</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d7</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d8</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d9</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d10</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d11</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d12</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d13</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d14</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d15</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d16</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d17</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d18</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d19</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/d20</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <!-- AI & Machine Learning Tools -->
+  <url><loc>https://curatedgems.com/tool/ai1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai2</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai4</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai5</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai7</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai8</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai9</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai10</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai11</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai12</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai13</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai14</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai15</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai16</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai17</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai18</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai19</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/ai20</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Productivity Tools -->
+  <url><loc>https://curatedgems.com/tool/p1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p2</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p4</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p5</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p7</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p8</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p9</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p10</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p11</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p12</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p13</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p14</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p15</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p16</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p17</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p18</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p19</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/p20</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Marketing Tools -->
+  <url><loc>https://curatedgems.com/tool/m1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m2</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m4</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m5</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m7</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m8</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m9</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m10</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m11</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m12</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m13</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m14</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m15</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m16</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m17</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m18</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m19</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/m20</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Education Tools -->
+  <url><loc>https://curatedgems.com/tool/e1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e2</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e4</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e5</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e7</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e8</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e9</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e10</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e11</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e12</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e13</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e14</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e15</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e16</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e17</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e18</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e19</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/e20</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Coding Tools -->
+  <url><loc>https://curatedgems.com/tool/c1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c2</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c4</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c5</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c7</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c8</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c9</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c10</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c11</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c12</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c13</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c14</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c15</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c16</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c17</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c18</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c19</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://curatedgems.com/tool/c20</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Utility Tools -->
+  <url><loc>https://curatedgems.com/tool/util1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+</urlset>
