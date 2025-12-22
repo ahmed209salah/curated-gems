@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://curatedgems.com/sitemap.xml
+Sitemap: https://curated-gems.lovable.app/sitemap.xml
