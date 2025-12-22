@@ -1830,6 +1830,11 @@ export const sampleTools: Tool[] = [
   }
 ]
 
+// Function to get tool by ID
+export const getToolById = (id: string): Tool | undefined => {
+  return sampleTools.find(tool => tool.id === id)
+}
+
 // Function to get tools by category
 export const getToolsByCategory = (categoryId: string): Tool[] => {
   return sampleTools.filter(tool => tool.category === categoryId)
@@ -1841,8 +1846,7 @@ export const searchTools = (query: string): Tool[] => {
   return sampleTools.filter(tool => 
     tool.name.toLowerCase().includes(lowercaseQuery) ||
     tool.description.toLowerCase().includes(lowercaseQuery) ||
-    tool.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)) ||
-    tool.category.toLowerCase().includes(lowercaseQuery)
+    tool.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   )
 }
 
