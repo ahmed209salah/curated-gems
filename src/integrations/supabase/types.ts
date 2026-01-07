@@ -14,7 +14,166 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      alternatives: {
+        Row: {
+          alternative_id: string
+          created_at: string
+          id: string
+          product_id: string
+          relevance_score: number | null
+        }
+        Insert: {
+          alternative_id: string
+          created_at?: string
+          id?: string
+          product_id: string
+          relevance_score?: number | null
+        }
+        Update: {
+          alternative_id?: string
+          created_at?: string
+          id?: string
+          product_id?: string
+          relevance_score?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "alternatives_alternative_id_fkey"
+            columns: ["alternative_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "alternatives_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      products: {
+        Row: {
+          categories: Database["public"]["Enums"]["category_tag"][] | null
+          created_at: string
+          description: string
+          icon_url: string | null
+          id: string
+          is_featured: boolean | null
+          name: string
+          official_url: string | null
+          platforms: Database["public"]["Enums"]["platform_tag"][] | null
+          pricing: Database["public"]["Enums"]["pricing_tag"] | null
+          short_description: string | null
+          slug: string
+          updated_at: string
+          upvote_count: number | null
+        }
+        Insert: {
+          categories?: Database["public"]["Enums"]["category_tag"][] | null
+          created_at?: string
+          description: string
+          icon_url?: string | null
+          id?: string
+          is_featured?: boolean | null
+          name: string
+          official_url?: string | null
+          platforms?: Database["public"]["Enums"]["platform_tag"][] | null
+          pricing?: Database["public"]["Enums"]["pricing_tag"] | null
+          short_description?: string | null
+          slug: string
+          updated_at?: string
+          upvote_count?: number | null
+        }
+        Update: {
+          categories?: Database["public"]["Enums"]["category_tag"][] | null
+          created_at?: string
+          description?: string
+          icon_url?: string | null
+          id?: string
+          is_featured?: boolean | null
+          name?: string
+          official_url?: string | null
+          platforms?: Database["public"]["Enums"]["platform_tag"][] | null
+          pricing?: Database["public"]["Enums"]["pricing_tag"] | null
+          short_description?: string | null
+          slug?: string
+          updated_at?: string
+          upvote_count?: number | null
+        }
+        Relationships: []
+      }
+      suggestions: {
+        Row: {
+          created_at: string
+          id: string
+          product_id: string
+          reason: string | null
+          status: string | null
+          suggested_name: string
+          suggested_url: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          product_id: string
+          reason?: string | null
+          status?: string | null
+          suggested_name: string
+          suggested_url?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          product_id?: string
+          reason?: string | null
+          status?: string | null
+          suggested_name?: string
+          suggested_url?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "suggestions_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      upvotes: {
+        Row: {
+          created_at: string
+          id: string
+          product_id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          product_id: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          product_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "upvotes_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +182,25 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      category_tag:
+        | "productivity"
+        | "design"
+        | "ai"
+        | "development"
+        | "marketing"
+        | "communication"
+        | "security"
+        | "finance"
+        | "education"
+        | "entertainment"
+        | "photography"
+        | "music"
+        | "video"
+        | "writing"
+        | "business"
+        | "utilities"
+      platform_tag: "web" | "ios" | "android" | "windows" | "mac" | "linux"
+      pricing_tag: "free" | "freemium" | "paid" | "open_source"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +327,27 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      category_tag: [
+        "productivity",
+        "design",
+        "ai",
+        "development",
+        "marketing",
+        "communication",
+        "security",
+        "finance",
+        "education",
+        "entertainment",
+        "photography",
+        "music",
+        "video",
+        "writing",
+        "business",
+        "utilities",
+      ],
+      platform_tag: ["web", "ios", "android", "windows", "mac", "linux"],
+      pricing_tag: ["free", "freemium", "paid", "open_source"],
+    },
   },
 } as const
