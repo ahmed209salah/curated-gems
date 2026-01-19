@@ -49,7 +49,12 @@ export function useProducts(filters?: Partial<FilterState>) {
         .order('upvote_count', { ascending: false });
 
       if (filters?.search) {
-        query = query.or(`name.ilike.%${filters.search}%,description.ilike.%${filters.search}%`);
+        // Escape special ILIKE characters to prevent pattern injection
+        const escaped = filters.search
+          .replace(/\\/g, '\\\\')
+          .replace(/%/g, '\\%')
+          .replace(/_/g, '\\_');
+        query = query.or(`name.ilike.%${escaped}%,description.ilike.%${escaped}%`);
       }
 
       if (filters?.pricing && filters.pricing.length > 0) {
