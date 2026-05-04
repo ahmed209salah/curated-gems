@@ -31,8 +31,8 @@ const bestForLabels = {
 }
 
 const ToolPage = () => {
-  const { toolId } = useParams<{ toolId: string }>()
-  const tool = toolId ? getToolById(toolId) : null
+  const { id } = useParams<{ id: string }>()
+  const tool = id ? getToolById(id) : null
   const category = tool ? categories.find(c => c.id === tool.category) : null
   const relatedTools = tool ? getToolsByCategory(tool.category).filter(t => t.id !== tool.id).slice(0, 3) : []
 
