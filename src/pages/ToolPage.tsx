@@ -83,6 +83,8 @@ const ToolPage = () => {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": tool.rating,
+            "ratingCount": 1,
+            "reviewCount": 1,
             "bestRating": "5",
             "worstRating": "1"
           },
