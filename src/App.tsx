@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import AuthPage from "./pages/AuthPage";
 import ToolPage from "./pages/ToolPage";
+import ToolsIndex from "./pages/ToolsIndex";
+import ToolsCategory from "./pages/ToolsCategory";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -18,7 +20,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/tool" element={<Index />} />
+          <Route path="/tool" element={<ToolsIndex />} />
+          <Route path="/tools" element={<ToolsIndex />} />
+          <Route path="/tools/:category" element={<ToolsCategory />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/tool/:id" element={<ToolPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
