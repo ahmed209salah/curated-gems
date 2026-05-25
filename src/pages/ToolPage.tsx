@@ -104,7 +104,7 @@ const ToolPage = () => {
             <div className="w-full md:w-1/3">
               <img 
                 src={tool.thumbnail} 
-                alt={`${tool.name} screenshot`}
+                alt={`${tool.name} tool screenshot and preview`}
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
@@ -196,7 +196,7 @@ const ToolPage = () => {
                   <Card className="p-4 bg-gradient-card border-0 hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02]">
                     <img 
                       src={relatedTool.thumbnail} 
-                      alt={relatedTool.name}
+                      alt={`${relatedTool.name} tool preview`}
                       className="w-full aspect-video object-cover rounded-lg mb-4"
                     />
                     <h3 className="font-semibold mb-2">{relatedTool.name}</h3>

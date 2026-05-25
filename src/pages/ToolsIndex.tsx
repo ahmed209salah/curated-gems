@@ -6,22 +6,18 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { useEffect } from "react";
+import { setPageMeta } from "@/lib/seo";
 
 const ToolsIndex = () => {
   const { data: products, isLoading } = useProducts();
 
   useEffect(() => {
-    document.title = "All Tools Directory | Curated Gems";
-    const meta = document.querySelector('meta[name="description"]') || (() => {
-      const m = document.createElement("meta");
-      m.setAttribute("name", "description");
-      document.head.appendChild(m);
-      return m;
-    })();
-    meta.setAttribute(
-      "content",
-      "Browse our complete directory of curated tools across AI, design, development, productivity and more."
-    );
+    setPageMeta({
+      title: "Tools Directory — Browse all curated tools | Curated Gems",
+      description:
+        "Browse the complete Curated Gems directory of free, privacy-friendly tools across AI, design, development, productivity and more.",
+      url: "https://curated-gems.lovable.app/tools",
+    });
   }, []);
 
   const categoryKeys = Object.keys(CATEGORY_LABELS) as CategoryTag[];
