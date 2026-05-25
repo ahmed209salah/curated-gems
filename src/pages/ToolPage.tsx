@@ -121,7 +121,7 @@ const ToolPage = () => {
                 )}
               </div>
               
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">{tool.name}</h1>
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">{tool.name} — Free Tool Review</h1>
               
               <p className="text-lg text-white/90 mb-4">{tool.description}</p>
               
