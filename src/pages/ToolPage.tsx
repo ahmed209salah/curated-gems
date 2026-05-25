@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card"
 import { getToolById, getToolsByCategory, Tool } from "@/data/tools"
 import { categories } from "@/data/categories"
 import { ArrowLeft, ExternalLink, Star, CheckCircle } from "lucide-react"
+import { setPageMeta } from "@/lib/seo"
 
 const trustColors = {
   excellent: 'text-trust-excellent border-trust-excellent bg-trust-excellent/10',

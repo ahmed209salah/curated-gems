@@ -144,9 +144,9 @@ const Index = () => {
                 >
                   ← Back to Categories
                 </Button>
-                <h1 id="category-heading" className="text-3xl md:text-4xl font-bold mb-2">
+                <h2 id="category-heading" className="text-3xl md:text-4xl font-bold mb-2">
                   {selectedCategoryData?.title} Tools
-                </h1>
+                </h2>
                 <p className="text-lg text-muted-foreground">
                   {selectedCategoryData?.description}
                 </p>
@@ -198,9 +198,9 @@ const Index = () => {
                 >
                   ← Clear Search
                 </Button>
-                <h1 id="search-heading" className="text-3xl md:text-4xl font-bold mb-2">
+                <h2 id="search-heading" className="text-3xl md:text-4xl font-bold mb-2">
                   Search Results for "{searchQuery}"
-                </h1>
+                </h2>
                 <p className="text-lg text-muted-foreground">
                   Found {displayedTools.length} matching tools
                 </p>
