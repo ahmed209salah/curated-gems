@@ -39,16 +39,11 @@ const ToolPage = () => {
 
   useEffect(() => {
     if (tool) {
-      document.title = `${tool.name} - Free Tool Review | Curated Gems`
-      const metaDescription = document.querySelector('meta[name="description"]')
-      if (metaDescription) {
-        metaDescription.setAttribute('content', tool.detailedReview || tool.description)
-      } else {
-        const meta = document.createElement('meta')
-        meta.name = 'description'
-        meta.content = tool.detailedReview || tool.description
-        document.head.appendChild(meta)
-      }
+      setPageMeta({
+        title: `${tool.name} - Free Tool Review | Curated Gems`,
+        description: tool.description,
+        url: `https://curated-gems.lovable.app/tool/${tool.id}`,
+      })
     }
   }, [tool])
 
