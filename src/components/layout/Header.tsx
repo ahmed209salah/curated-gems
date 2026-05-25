@@ -46,6 +46,7 @@ export function Header() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <input
                 type="text"
+                aria-label="Search for software, tools, or alternatives"
                 placeholder="Search for software, tools, or alternatives..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -93,6 +94,8 @@ export function Header() {
             variant="ghost"
             size="icon"
             className="md:hidden"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -107,6 +110,7 @@ export function Header() {
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <input
                   type="text"
+                  aria-label="Search"
                   placeholder="Search..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

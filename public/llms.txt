@@ -1,0 +1,29 @@
+# Curated Gems
+
+> A community-driven directory of the best free, privacy-friendly software, apps and AI tools — handpicked alternatives that prioritize quality, open-source values, and great UX.
+
+Curated Gems helps creators, makers, and entrepreneurs find their next favorite tool in three clicks or fewer. Every tool is reviewed and categorized.
+
+## Pages
+
+- [Home](/): Featured tools, categories, and search.
+- [Tools Directory](/tools): Browse the complete catalog of curated tools.
+
+## Categories
+
+- [AI Tools](/tools/ai): Curated AI and machine-learning tools.
+- [Design Tools](/tools/design): Design, UI and creative tools.
+- [Development Tools](/tools/development): Developer tools and frameworks.
+- [Productivity Tools](/tools/productivity): Productivity and workflow apps.
+- [Marketing Tools](/tools/marketing): Marketing, growth and analytics tools.
+- [Writing Tools](/tools/writing): Writing and content creation tools.
+- [Video Tools](/tools/video): Video editing and production tools.
+- [Photography Tools](/tools/photography): Photo editing and organization tools.
+- [Music Tools](/tools/music): Music creation and audio tools.
+- [Communication Tools](/tools/communication): Chat, meetings and collaboration.
+- [Security Tools](/tools/security): Privacy and security tools.
+- [Finance Tools](/tools/finance): Finance and accounting tools.
+- [Education Tools](/tools/education): Learning and education resources.
+- [Entertainment Tools](/tools/entertainment): Entertainment and media tools.
+- [Business Tools](/tools/business): Business and operations tools.
+- [Utilities](/tools/utilities): General utility tools.

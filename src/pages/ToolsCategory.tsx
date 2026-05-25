@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { useEffect } from "react";
 import NotFound from "./NotFound";
+import { setPageMeta } from "@/lib/seo";
 
 const ToolsCategory = () => {
   const { category } = useParams<{ category: string }>();
@@ -19,20 +20,12 @@ const ToolsCategory = () => {
 
   useEffect(() => {
     if (!isValid) return;
-    document.title = `${label} Tools | Curated Gems`;
-    const meta =
-      document.querySelector('meta[name="description"]') ||
-      (() => {
-        const m = document.createElement("meta");
-        m.setAttribute("name", "description");
-        document.head.appendChild(m);
-        return m;
-      })();
-    meta.setAttribute(
-      "content",
-      `Discover the best ${label.toLowerCase()} tools, hand-picked and reviewed.`
-    );
-  }, [label, isValid]);
+    setPageMeta({
+      title: `${label} Tools — Best curated picks | Curated Gems`,
+      description: `Discover the best ${label.toLowerCase()} tools on Curated Gems — handpicked, reviewed, and ready to use.`,
+      url: `https://curated-gems.lovable.app/tools/${categoryKey}`,
+    });
+  }, [label, isValid, categoryKey]);
 
   if (!isValid) return <NotFound />;
 

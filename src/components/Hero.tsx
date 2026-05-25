@@ -45,6 +45,7 @@ export function Hero({ onSearch, searchQuery, setSearchQuery }: HeroProps) {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
             <Input
               type="text"
+              aria-label="Search for tools, categories, or features"
               placeholder="Search for tools, categories, or features..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}

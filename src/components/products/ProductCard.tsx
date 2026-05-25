@@ -67,7 +67,7 @@ export function ProductCard({ product, rank }: ProductCardProps) {
           {product.icon_url ? (
             <img 
               src={product.icon_url} 
-              alt={product.name}
+              alt={`${product.name} logo`}
               className="w-full h-full object-cover"
             />
           ) : (
@@ -99,6 +99,7 @@ export function ProductCard({ product, rank }: ProductCardProps) {
                 href={product.official_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Visit ${product.name} official website`}
                 onClick={(e) => e.stopPropagation()}
                 className="shrink-0 p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
               >

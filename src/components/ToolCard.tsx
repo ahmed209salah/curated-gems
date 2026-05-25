@@ -72,7 +72,7 @@ export function ToolCard({
           {!imageError ? (
             <img 
               src={thumbnail} 
-              alt={name}
+              alt={`${name} tool screenshot`}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               onError={() => setImageError(true)}
             />
@@ -86,6 +86,8 @@ export function ToolCard({
             <Button
               size="sm"
               variant="outline"
+              aria-label={isBookmarked ? `Remove ${name} from bookmarks` : `Bookmark ${name}`}
+              aria-pressed={isBookmarked}
               className="w-8 h-8 p-0 bg-white/90 backdrop-blur-sm hover:bg-white"
               onClick={handleBookmark}
             >

@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card"
 import { getToolById, getToolsByCategory, Tool } from "@/data/tools"
 import { categories } from "@/data/categories"
 import { ArrowLeft, ExternalLink, Star, CheckCircle } from "lucide-react"
+import { setPageMeta } from "@/lib/seo"
 
 const trustColors = {
   excellent: 'text-trust-excellent border-trust-excellent bg-trust-excellent/10',
@@ -38,16 +39,11 @@ const ToolPage = () => {
 
   useEffect(() => {
     if (tool) {
-      document.title = `${tool.name} - Free Tool Review | Curated Gems`
-      const metaDescription = document.querySelector('meta[name="description"]')
-      if (metaDescription) {
-        metaDescription.setAttribute('content', tool.detailedReview || tool.description)
-      } else {
-        const meta = document.createElement('meta')
-        meta.name = 'description'
-        meta.content = tool.detailedReview || tool.description
-        document.head.appendChild(meta)
-      }
+      setPageMeta({
+        title: `${tool.name} - Free Tool Review | Curated Gems`,
+        description: tool.description,
+        url: `https://curated-gems.lovable.app/tool/${tool.id}`,
+      })
     }
   }, [tool])
 
@@ -108,7 +104,7 @@ const ToolPage = () => {
             <div className="w-full md:w-1/3">
               <img 
                 src={tool.thumbnail} 
-                alt={`${tool.name} screenshot`}
+                alt={`${tool.name} tool screenshot and preview`}
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
@@ -125,7 +121,7 @@ const ToolPage = () => {
                 )}
               </div>
               
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">{tool.name}</h1>
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">{tool.name} — Free Tool Review</h1>
               
               <p className="text-lg text-white/90 mb-4">{tool.description}</p>
               
@@ -200,7 +196,7 @@ const ToolPage = () => {
                   <Card className="p-4 bg-gradient-card border-0 hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02]">
                     <img 
                       src={relatedTool.thumbnail} 
-                      alt={relatedTool.name}
+                      alt={`${relatedTool.name} tool preview`}
                       className="w-full aspect-video object-cover rounded-lg mb-4"
                     />
                     <h3 className="font-semibold mb-2">{relatedTool.name}</h3>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Layout } from '@/components/layout';
 import { useAuth } from '@/hooks/useAuth';
@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { z } from 'zod';
+import { setPageMeta } from '@/lib/seo';
 
 const authSchema = z.object({
   email: z.string().email('Please enter a valid email'),
@@ -20,6 +21,16 @@ export default function AuthPage() {
   const [loading, setLoading] = useState(false);
   const { signIn, signUp, user } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setPageMeta({
+      title: isSignUp ? 'Create your account | Curated Gems' : 'Sign in | Curated Gems',
+      description: isSignUp
+        ? 'Create a free Curated Gems account to upvote tools, bookmark gems, and suggest alternatives.'
+        : 'Sign in to your Curated Gems account to upvote tools, bookmark gems, and suggest alternatives.',
+      url: 'https://curated-gems.lovable.app/auth',
+    });
+  }, [isSignUp]);
 
   // Redirect if already logged in
   if (user) {
@@ -71,9 +82,12 @@ export default function AuthPage() {
           <h1 className="text-2xl font-bold text-center mb-2">
             {isSignUp ? 'Create Account' : 'Welcome Back'}
           </h1>
-          <p className="text-muted-foreground text-center mb-8">
+          <p className="text-muted-foreground text-center mb-6">
             {isSignUp ? 'Sign up to upvote and suggest alternatives' : 'Sign in to your account'}
           </p>
+          <h2 className="text-base font-semibold text-center mb-6">
+            {isSignUp ? 'Account details' : 'Enter your credentials'}
+          </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>

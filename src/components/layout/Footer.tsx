@@ -54,6 +54,7 @@ export function Footer() {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Curated Gems on GitHub"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Github className="h-5 w-5" />
@@ -62,6 +63,7 @@ export function Footer() {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Curated Gems on Twitter"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Twitter className="h-5 w-5" />
