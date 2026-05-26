@@ -123,22 +123,35 @@ const ToolPage = () => {
   const category = tool ? categories.find(c => c.id === tool.category) : null
   const relatedTools = tool ? getToolsByCategory(tool.category).filter(t => t.id !== tool.id).slice(0, 3) : []
 
+  const seo = useMemo(() => {
+    if (!tool) return null
+    const categoryTitle = category?.title || tool.category
+    return {
+      categoryTitle,
+      pros: buildPros(tool, categoryTitle),
+      cons: buildCons(tool),
+      useCases: buildUseCases(tool, categoryTitle),
+      faqs: buildFaq(tool, categoryTitle),
+    }
+  }, [tool, category])
+
   useEffect(() => {
-    if (tool) {
+    if (tool && seo) {
+      const desc = `${tool.name} review (${tool.rating}/5) — ${tool.description} See pros, cons, pricing, use cases, and FAQs for this free ${seo.categoryTitle.toLowerCase()} tool on Curated Gems.`.slice(0, 300)
       setPageMeta({
-        title: `${tool.name} - Free Tool Review | Curated Gems`,
-        description: tool.description,
+        title: `${tool.name} Review (${tool.rating}/5) — Free ${seo.categoryTitle} Tool | Curated Gems`,
+        description: desc,
         url: `https://curated-gems.lovable.app/tool/${tool.id}`,
       })
     }
-  }, [tool])
+  }, [tool, seo])
 
   const handleVisit = () => {
     window.open('https://otieu.com/4/9611550', '_blank')
     window.open(tool?.website, '_blank')
   }
 
-  if (!tool) {
+  if (!tool || !seo) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
@@ -161,7 +174,7 @@ const ToolPage = () => {
           "name": tool.name,
           "description": tool.description,
           "url": tool.website,
-          "applicationCategory": category?.title || tool.category,
+          "applicationCategory": seo.categoryTitle,
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": tool.rating,
@@ -175,6 +188,19 @@ const ToolPage = () => {
             "price": "0",
             "priceCurrency": "USD"
           }
+        })
+      }} />
+
+      {/* FAQ JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": seo.faqs.map((f) => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a },
+          })),
         })
       }} />
 
