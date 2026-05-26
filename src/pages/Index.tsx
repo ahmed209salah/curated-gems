@@ -73,12 +73,12 @@ const Index = () => {
                 {displayedCategories.map((category) => (
                   <CategoryCard
                     key={category.id}
+                    id={category.id}
                     title={category.title}
                     description={category.description}
                     icon={category.icon}
                     toolCount={category.toolCount}
                     trending={category.trending}
-                    onClick={() => handleCategoryClick(category.id)}
                   />
                 ))}
               </div>
