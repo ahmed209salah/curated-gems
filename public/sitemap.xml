@@ -7,7 +7,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Tools directory + category index pages -->
+  <!-- Tools directory + DB category index pages -->
   <url><loc>https://curated-gems.lovable.app/tools</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://curated-gems.lovable.app/tools/productivity</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://curated-gems.lovable.app/tools/design</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -25,6 +25,23 @@
   <url><loc>https://curated-gems.lovable.app/tools/writing</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://curated-gems.lovable.app/tools/business</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://curated-gems.lovable.app/tools/utilities</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Homepage category pages (crawlable, one per category card) -->
+  <url><loc>https://curated-gems.lovable.app/category/design</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/ai</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/productivity</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/marketing</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/education</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/coding</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/gaming</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/writing</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/photography</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/music</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/business</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/health</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/ecommerce</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/utilities</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://curated-gems.lovable.app/category/web</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   
   <!-- Design Tools -->
   <url><loc>https://curated-gems.lovable.app/tool/d1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
