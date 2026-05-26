@@ -8,6 +8,7 @@ import AuthPage from "./pages/AuthPage";
 import ToolPage from "./pages/ToolPage";
 import ToolsIndex from "./pages/ToolsIndex";
 import ToolsCategory from "./pages/ToolsCategory";
+import CategoryPage from "./pages/CategoryPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/tool" element={<ToolsIndex />} />
           <Route path="/tools" element={<ToolsIndex />} />
           <Route path="/tools/:category" element={<ToolsCategory />} />
+          <Route path="/category/:id" element={<CategoryPage />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/tool/:id" element={<ToolPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
