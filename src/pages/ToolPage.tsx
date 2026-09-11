@@ -147,7 +147,6 @@ const ToolPage = () => {
   }, [tool, seo])
 
   const handleVisit = () => {
-    window.open('https://otieu.com/4/9611550', '_blank')
     window.open(tool?.website, '_blank')
   }
 
