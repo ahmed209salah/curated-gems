@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { Badge } from "@/components/ui/badge"
-import { Star, CheckCircle, Users, Briefcase, GraduationCap } from "lucide-react"
+import { Users, Briefcase, GraduationCap } from "lucide-react"
 
 interface ToolComparisonTableProps {
   tools: Tool[]
@@ -35,13 +35,12 @@ export function ToolComparisonTable({ tools, categoryTitle }: ToolComparisonTabl
       <div className="overflow-x-auto rounded-lg border border-border bg-card">
         <Table>
           <TableCaption className="text-muted-foreground py-4">
-            Side-by-side comparison of the top {categoryTitle.toLowerCase()} tools to help you make an informed decision.
+            Side-by-side summary of {categoryTitle.toLowerCase()} tools, based on our own editorial notes. Check each
+            tool's website for current features and pricing.
           </TableCaption>
           <TableHeader>
             <TableRow className="bg-muted/50">
               <TableHead className="font-semibold">Tool</TableHead>
-              <TableHead className="font-semibold">Rating</TableHead>
-              <TableHead className="font-semibold">Trust Level</TableHead>
               <TableHead className="font-semibold">Best For</TableHead>
               <TableHead className="font-semibold">Key Features</TableHead>
             </TableRow>
