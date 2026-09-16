@@ -9,7 +9,12 @@ import ToolPage from "./pages/ToolPage";
 import ToolsIndex from "./pages/ToolsIndex";
 import ToolsCategory from "./pages/ToolsCategory";
 import CategoryPage from "./pages/CategoryPage";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsPage from "./pages/legal/TermsPage";
+import CookiePolicy from "./pages/legal/CookiePolicy";
+import RefundPolicy from "./pages/legal/RefundPolicy";
 import NotFound from "./pages/NotFound";
+import { CookieNotice } from "./components/CookieNotice";
 
 const queryClient = new QueryClient();
 
@@ -27,9 +32,14 @@ const App = () => (
           <Route path="/category/:id" element={<CategoryPage />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/tool/:id" element={<ToolPage />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/cookies" element={<CookiePolicy />} />
+          <Route path="/refunds" element={<RefundPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieNotice />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
